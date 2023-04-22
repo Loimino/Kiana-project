@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.css' %}" />
+        <style>
+    body{
+       background-color:#D7CEC7;
+    }
+            a:link {
+      color: #C09F80;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #C09F80;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #C09F80;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: #C09F80;
+      text-decoration: none;
+    }
+
+    </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark">
+      <a href="{% url 'return_maintenance_home' %}" class="mr-4">Return</a>
+      <label style="font-size:24px; color:white;" class="mr-auto">Employees Nearby</label>
+  </nav>
+    <label style="font-size:20px; color:#76323F;padding-top:10px">■ mac: {{mac}}</label>
+<table class="table table-striped table-bordered mt-1">
+  <thead class="table_title">
+    <tr>
+      <th>No.</th>
+      <th>employee title</th>
+      <th>employee name</th>
+      <th>site</th>
+      <th>level</th>
+      <th>longitude</th>
+      <th>latitude</th>
+        <th>contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if rec_list is not None %}
+    {% for rec in rec_list %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+        <td>{{ rec.employee_title }}</td>
+                <td>{{ rec.employee_name }}</td>
+        <td>{{ rec.site }}</td>
+        <td>{{ rec.level }}</td>
+        <td>{{ rec.lon }}</td>
+        <td>{{ rec.lat }}</td>
+        <td>{{ rec.contact_info }}</td>
+    </tr>
+    {% endfor %}
+
+    {% endif %}
+</table>
+  <div id="img-container" style="margin:auto; overflow:hidden; text-align: center;">
+    <img src="{{img}}" style="width:40%; height:40%;" />
+  </div>
+</body>
+</html>

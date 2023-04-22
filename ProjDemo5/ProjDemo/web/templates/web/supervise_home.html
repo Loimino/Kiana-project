@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiana</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.css' %}" />
+        <style>
+    body{
+       background-color:#D7CEC7;
+    }
+    .table_title{
+    color: #76323F;
+    }
+
+    #mnav a:link {
+      color: #C09F80;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration: none;
+    }
+
+    #mnav a:visited {
+      color: #C09F80;
+      text-decoration: none;
+    }
+
+    #mnav a:hover {
+      color: #C09F80;
+      text-decoration: none;
+    }
+
+    #mnav a:active {
+      color: #C09F80;
+      text-decoration: none;
+    }
+    </style>
+
+</head>
+<body>
+  <nav id="mnav" class="navbar navbar-expand-sm bg-dark">
+      <a href="{% url 'return_first' %}" class="mr-4">Return</a>
+      <label style="font-size:24px; color:white">Supervise</label>
+</nav>
+<table class="table table-striped table-bordered mt-1">
+  <thead class="table_title">
+    <tr>
+      <th>No.</th>
+      <th>mac</th>
+      <th>record time</th>
+      <th>status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if rec_list is not None %}
+    {% for rec in rec_list %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td><a href="/web/show_machine_detail/?mac={{ rec.mac }}">{{ rec.mac }}</a></td>
+      <td>{{ rec.rec_time  | date:"Y-m-d H:i:s"  }}</td>
+      <td>{{ rec.status }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>

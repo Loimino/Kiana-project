@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinan</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.css' %}" />
+    <style>
+body{
+   background-color:#D7CEC7;
+   padding-top:50px;
+}
+
+.txt_title{
+  font-size: 48px;
+  font-weight: bold;
+  color: #565656;
+}
+    </style>
+</head>
+<body>
+<table width="100%">
+    <tr><td align="center">
+        <label class="txt_title">Log in</label>
+    </td></tr>
+    <tr><td align="center">
+<form action="{% url 'login_check' %}" method="post" class="form-signin" style="width:100%">
+{% csrf_token %}
+<table>
+    <tr style="height:60px">
+        <td>
+            <input name="username" type="text" size="20" maxlength="50" value="" placeholder="Please enter user name" class="form-control" />
+        </td>
+    </tr>
+    <tr style="height:60px">
+        <td>
+            <input name="password" type="password" size="20" maxlength="50" value="" placeholder="Please enter password" class="form-control"/>
+        </td>
+    </tr>
+    <tr style="height:60px">
+        <td>
+            <input id="btnLogin" type="submit" value="Login" class="btn btn-primary btn-block rounded-pill" />
+        </td>
+    </tr>
+    </table>
+</form>
+    </td></tr>
+</table>
+</body>
+</html>

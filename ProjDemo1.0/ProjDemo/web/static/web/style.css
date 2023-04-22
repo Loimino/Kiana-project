@@ -1,0 +1,126 @@
+html{
+  font-size: 14px;
+}
+
+body{
+  background-color: #011276;
+}
+
+/*  标题栏样式 */
+.hy-master-top {
+  background-color: #011276;
+  background-image: url("images/bgtitle.png");
+  color: #FFFFFF;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+
+.hy-master-top .hy-sys-title {
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+/*  主体部分  */
+.hy-master-middle {
+  background-color: #525252;
+  margin-top: 50px;
+  height: calc(91vh);
+}
+
+/*  主体-左侧导航栏 */
+.hy-master-middle .sidebar {
+  text-align: left;
+  color: #FFFFFF;
+  background-color: #011276;
+  min-width: 180px;
+  height: calc(91vh);
+}
+
+.hy-master-middle .sidebar a:link {
+  color: #949BC4;
+  text-decoration: none;
+}
+
+.hy-master-middle .sidebar a:visited {
+  color: #949BC4;
+  text-decoration: none;
+}
+
+.hy-master-middle .sidebar a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hy-master-middle .sidebar a:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hy-master-middle .sidebar .itemactive {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*  主体-工作区  */
+.hy-div-main {
+  padding: 10px;
+  min-height: 100px;
+  background-color: #F2F2F8;
+  overflow-y: auto;
+}
+
+/*  工作区-页面标题  */
+.hy-div-main .hy-div-pagetitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/*  工作区-列表标题行  */
+.hy-div-main .hy_table_title{
+  background-color: #BDC0DA;
+  height: 40px;
+  text-align: center;
+}
+
+/* 工作区-查询 */
+.hy-form-search{
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+/*  工作区-分页  */
+.hy-div-main .hy-txt-pager{
+  padding: 0.5rem 0.75rem;
+}
+
+/*  工作区-明细页-输入项标签  */
+.hy-div-main .hy-input-label {
+  text-align: right;
+}
+
+.hy-div-main .hy-div-radio {
+  justify-content:center;
+  align-items: center;
+}
+
+/*  工作区-明细页-保存取消功能钮行  */
+.hy-div-main .hy-div-btn-return {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*  工作区-提示信息  */
+.hy-div-main .hy-txt-errormessage{
+  font-size: 12px;
+  color: #b92428;
+}
+
+/*  工作区-独立页面标题  */
+.hy-div-main .hy-div-pagetitle-single {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

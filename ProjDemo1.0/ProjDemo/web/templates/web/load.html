@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinan</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.css' %}" />
+    <style>
+a:link {
+  color: #76323F;
+  font-size:200px;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #76323F;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #76323F;
+  text-decoration: none;
+}
+
+a:active {
+  color: #76323F;
+  text-decoration: none;
+}
+
+body{
+   background-color:#D7CEC7;
+}
+
+.loadpage{
+  width:100%;
+  margin:0px;
+  padding-top:150px;
+}
+    </style>
+</head>
+<body>
+<div class="loadpage">
+    <table width="100%">
+        <tr><td align="center">
+            <a style="font-size:180px" href="{% url 'login_page' %}" >Facility Care Pro</a>
+        </td></tr>
+        <tr><td align="center">
+            <a style="font-size:150px" href="{% url 'login_page' %}" >Kiana</a>
+        </td></tr>
+    </table>
+</div>
+</body>
+</html>

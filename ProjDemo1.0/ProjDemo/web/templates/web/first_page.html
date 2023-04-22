@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinan</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/web/bootstrap/css/bootstrap.css' %}" />
+    <style>
+    body{
+       background-color:#D7CEC7;
+    }
+    a:link {
+  color: #76323F;
+  font-size:50px;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #76323F;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #76323F;
+  text-decoration: none;
+}
+
+a:active {
+  color: #76323F;
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark">
+      <label style="font-size:24px; color:white">Kinan</label>
+</nav>
+  <div style="width:100%;padding-top:100px;display:flex;justify-content:center">
+  <table width="40%"><tr><td style="text-align:center;height:120px;background-color:#C09F80">
+<a href="{% url 'supervise_home' %}">Supervise</a>
+  </td></tr>
+      <tr><td style="height:20px"> </td></tr>
+      <tr><td style="text-align:center;height:120px;background-color:#C09F80">
+<a href="{% url 'maintenance_home' %}" >Maintenance</a>
+      </td></tr>
+  </table>
+  </div>
+</body>
+</html>
